@@ -4,6 +4,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faExclamationCircle } from '@fortawesome/free-solid-svg-icons';
 import { faLanguage } from '@fortawesome/free-solid-svg-icons';
 
+const handleMonthDiff = (dateFrom:Date , dateTo:Date) => {
+  return dateTo.getMonth() - dateFrom.getMonth() + 
+  (12 * (dateTo.getFullYear() - dateFrom.getFullYear()))
+}
 export default function Card(props:mediaType) {
   return (
     <div className="col-lg-4 col-md-6 col-sm-12 col-xs-12">
@@ -54,7 +58,7 @@ export default function Card(props:mediaType) {
         <div className="card-footer">
           <h6 className="card-name">{props.name}</h6>
           <div className="card-status">
-            {props.status.charAt(0).toUpperCase() + props.status.slice(1)}
+            {props.status === "error" ? props.errorMessage :  props.status === "transcribing" ?  props.status.charAt(0).toUpperCase() + props.status.slice(1): "Edited " + handleMonthDiff(new Date(props.updatedAt), new Date()) +" months ago"}
           </div>
         </div>
       </div>
