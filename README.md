@@ -1,4 +1,4 @@
-Live URL to access : https://6339fccd32789e0008ef0d37--amazing-torte-4dc490.netlify.app/
+Live URL to access : https://amazing-torte-4dc490.netlify.app/
 ==================
 
 Follow the steps for Local setup 
