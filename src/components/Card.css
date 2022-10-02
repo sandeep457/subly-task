@@ -1,0 +1,135 @@
+.card{
+    background-color: #fff;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+    height: 300px;
+    margin: 20px 0;
+    border: 0px !important;
+    width: 100%;
+}
+.card img{
+    height: 220px;
+    border-radius: 2% 2% 0px 0px;
+    width: 100%;
+}
+.card img ~ .btn-edit{
+    display: none;
+}
+.card img.card-image:hover ~ .btn-edit{
+    display: block;
+    position: absolute;
+    top: 32%;
+    left: 38%;
+    border: 1px solid #fff;
+    color: #fff ;
+    width: 90px;
+}
+.card img.card-image ~ .btn-edit:hover{
+    display: block;
+    position: absolute;
+    top: 32%;
+    left: 38%;
+    border: 1px solid rgb(17, 16, 16);
+    color:  black;
+    width: 90px;
+}
+.card .content{
+    background-color: #000;
+    border-radius: 3% 3% 0px 0px;
+}
+.card .lang{
+    display: none;
+}
+.card .content:hover > .lang{
+    display: block;
+    width: 150px;
+    height: 28px;
+    background: #fff;
+    position: absolute;
+    z-index: 1000;
+    border-radius: 6px;
+    margin: 10px;
+    text-align: left;
+}
+ .lang span:first-child{
+    width: 28px;
+    display: inline-block;
+    background: #7838ecde;
+    height: 100%;
+    text-align: center;
+    float: left;
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+    color: #fff;
+}
+.card .lang span:last-child{
+    padding-left: 5px;
+    font-size: 14px;
+    color: #4e4848f0;
+}
+.card img.card-image:hover{
+    z-index: 1; 
+    opacity: 0.3;
+    cursor: pointer;
+}
+
+.card .transCard{
+    background: #fff;
+    opacity: 0.2;
+}
+
+.card .transcribingText{
+    margin: 0 auto;
+    color: black;
+    top: 32%;
+    left: 25%;
+    text-align: center;
+    position: absolute;
+}
+.card .transcribingText span{
+  background-image: linear-gradient(-155deg,rgba(74,148,214,.4) 45%,rgba(255,255,255,.08) 15%),linear-gradient(258deg,rgba(87,238,255,.1),rgba(77,108,211,.2));
+  background-color: rgba(74,148,214,.9);
+  color: #fff;
+  width: 200px;
+  height: 10px;
+  border-radius: 10px;
+  margin-top: 10px;
+  display: block;
+  text-align: center;
+  line-height: 40px;
+}
+.card-footer{
+    text-align: left;
+}
+.card-footer h6{
+    margin-bottom: 2px;
+}
+.card-footer .card-status{
+    color: gray;
+    font-size: 14px;
+}
+.card .errorCard{
+  height: 220px;
+  background-color: #ff140030;
+}
+.card .errorCard p{
+  color: #000000ab;
+  text-align: left;
+  padding: 50px 20px 0px 20px;
+}
+.card .btnGroup{
+    float: right;
+}
+.btnGroup button:first-child{
+    color: #000;
+    background-color: #fff;
+}
+.btnGroup button:last-child{
+    color: #fff;
+    margin: 0px 5px;
+    background-color: #7374d7;
+}
+.card  .fa-circle-exclamation{
+    color: red;
+    padding-right: 5px;
+}
