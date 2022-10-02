@@ -1,4 +1,8 @@
-# Getting Started with Create React App
+Live URL to access : https://6339fccd32789e0008ef0d37--amazing-torte-4dc490.netlify.app/
+==================
+
+Follow the steps for Local setup 
+================================
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
