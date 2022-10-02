@@ -22,8 +22,8 @@ export default function Dashboard() {
 
   const filterItem = (selectedStatus: string) => {
    const filteredArray = filesData.media.filter((newVal: { status: string }) => {
-     return (newVal.status === selectedStatus) ? newVal : []
-    });
+     return (newVal.status === selectedStatus)
+   });
     if (filteredArray && filteredArray.length > 0) {
       setFinalData(filteredArray);
     }else{
