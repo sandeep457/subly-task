@@ -10,8 +10,6 @@ const baseURL = "https://run.mocky.io/v3/a811c0e9-adae-4554-9694-173aa23bc38b";
 export default function Dashboard() {
   const [filesData, setFilesData] = useState<any>({});
   const [finalData, setFinalData] = useState([]);
-  let filteredArray: [];
-
   useEffect(() => {
     getData();
   }, []);
@@ -23,10 +21,8 @@ export default function Dashboard() {
   };
 
   const filterItem = (selectedStatus: string) => {
-    filteredArray = filesData.media.filter((newVal: { status: string }) => {
-      if (newVal.status === selectedStatus) {
-        return newVal;
-      }
+   const filteredArray = filesData.media.filter((newVal: { status: string }) => {
+     return (newVal.status === selectedStatus) ? newVal : []
     });
     if (filteredArray && filteredArray.length > 0) {
       setFinalData(filteredArray);
