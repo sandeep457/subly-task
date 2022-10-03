@@ -10,6 +10,8 @@ const baseURL = "https://run.mocky.io/v3/a811c0e9-adae-4554-9694-173aa23bc38b";
 export default function Dashboard() {
   const [filesData, setFilesData] = useState<any>({});
   const [finalData, setFinalData] = useState([]);
+
+  // on component load fetch data
   useEffect(() => {
     getData();
   }, []);
@@ -20,6 +22,7 @@ export default function Dashboard() {
     setFinalData(data.media);
   };
 
+  // filter functionality of cards based on status
   const filterItem = (selectedStatus: string) => {
    const filteredArray = filesData.media.filter((newVal: { status: string }) => {
      return (newVal.status === selectedStatus)

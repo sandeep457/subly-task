@@ -4,10 +4,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faExclamationCircle } from '@fortawesome/free-solid-svg-icons';
 import { faLanguage } from '@fortawesome/free-solid-svg-icons';
 
+//calculating months difference from present month
 const handleMonthDiff = (dateFrom:Date , dateTo:Date) => {
   return dateTo.getMonth() - dateFrom.getMonth() + 
   (12 * (dateTo.getFullYear() - dateFrom.getFullYear()))
 }
+
 export default function Card(props:mediaType) {
   return (
     <div className="col-lg-4 col-md-6 col-sm-12 col-xs-12">
