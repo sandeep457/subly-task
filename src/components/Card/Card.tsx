@@ -1,5 +1,5 @@
 import "./Card.css";
-import mediaType from "./interface";
+import mediaType from "../interface";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faExclamationCircle } from '@fortawesome/free-solid-svg-icons';
 import { faLanguage } from '@fortawesome/free-solid-svg-icons';
@@ -44,7 +44,7 @@ export default function Card(props:mediaType) {
               </p>
             )}
             <img
-              src={props.cover}
+              src={props.cover}  data-testid="hoverEdit"
               alt="banner"
               className={
                 props.status === "transcribing" ? "transCard" : "card-image"

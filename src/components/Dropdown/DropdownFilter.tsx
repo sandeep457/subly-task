@@ -1,15 +1,15 @@
-import mediaType from "./interface";
+import mediaType from "../interface";
 import "./Dropdown.css";
 type selectProps = {
   handleChange: (event: React.ChangeEvent<HTMLSelectElement>) => void;
-  data: [];
+  data: any;
 };
 
 export default function DropdownFilter(props: selectProps) {
   return (
     <div>
       <label>Filter by status: </label>
-      <select className="dropdown-container" id="select-input" onChange={props.handleChange}>
+      <select className="dropdown-container" id="select-input" data-testid="drpDown" onChange={props.handleChange}>
         <option className="dropdown-title" value={"default"}>All</option>
         {props.data ? props.data.map((option: mediaType) => {
               return (
@@ -20,12 +20,6 @@ export default function DropdownFilter(props: selectProps) {
               );
             })
           : ""}
-          <div className="dropdown-list-container">
-        <div className="dropdown-list-wrapper">
-            <ul className="dropdown-list"></ul>
-            <div className="floating-icon" aria-hidden="true"></div>
-        </div>
-    </div>
       </select>
     </div>
   );
